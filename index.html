@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Компонент «Форма»</title>
+</head>
+<body>
+  <h1>Форма бронирования</h1>
+  <form id="booking-form" action="#">
+    <div class="field-group phones-group">
+      <p class="field-container">
+        <label class="field-label" for="phone">Телефон</label>
+        <input class="field-input" id="phone" name="phone" type="text">
+      </p>
+    </div>
+    <div class="field-group dates-group">
+      <p class="field-container">
+        <label class="field-label" for="checkin-date">Дата заезда</label>
+        <input class="field-input" id="checkin-date" name="checkin-date" type="text" placeholder="ГГГГ-ММ-ДД">
+      </p>
+      <p class="field-container">
+        <label class="field-label" for="checkout-date">Дата выезда</label>
+        <input class="field-input" id="checkout-date" name="checkout-date" type="text" placeholder="ГГГГ-ММ-ДД">
+      </p>
+    </div>
+    <div class="field-group guests-group">
+      <p class="field-container">
+        <label class="field-label" for="adults">Количество взрослых</label>
+        <input class="field-input" id="adults" name="adults" type="text">
+      </p>
+      <p class="field-container">
+        <label class="field-label" for="children">Количество детей</label>
+        <input class="field-input" id="children" name="children" type="text">
+      </p>
+      <p class="field-container field-room-type">
+        <span class="field-label">Тип номера</span>
+        <!-- стилизовать простыми кастомными радибаттонами на css графике. просто квадратики -->
+        <input type="radio" name="room-type" value="single" checked id="radio-1">
+        <label class="custom-radio" for="radio-1">Одноместный</label>
+        <input type="radio" name="room-type" value="double" id="radio-2">
+        <label class="custom-radio" for="radio-2">Двухместный</label>
+        <input type="radio" name="room-type" value="family" id="radio-3">
+        <label class="custom-radio" for="radio-3">Семейный</label>
+      </p>
+    </div>
+    <button class="submit-btn" type="submit">Забронировать</button>
+  </form>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
